@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Exercise Evaluation</title>
+    <link rel="stylesheet" href="../static/css/main.css">
+    <!-- MediaPipe dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/pose/pose.js"></script>
+    <!-- Three.js -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>AI Exercise Evaluation</h1>
+        
+        <div class="exercise-controls">
+            <button id="startSquats" class="exercise-btn">Start Squats</button>
+            <button id="startPushups" class="exercise-btn">Start Push-Ups</button>
+            <button id="stopExercise" class="exercise-btn stop-btn" disabled>Stop</button>
+        </div>
+        
+        <div class="video-container">
+            <video id="webcam" autoplay playsinline></video>
+            <canvas id="output-canvas"></canvas>
+            <div id="three-container"></div>
+        </div>
+        
+        <div class="feedback-container">
+            <div id="exercise-status">Select an exercise to begin</div>
+            <div id="form-feedback"></div>
+            <div id="rep-counter">Reps: 0</div>
+        </div>
+    </div>
+
+    <!-- JavaScript files -->
+    <script src="{{ url_for('static', filename='js/mediapipe-handler.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/three-visualization.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/squat-evaluator.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/pushup-evaluator.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
