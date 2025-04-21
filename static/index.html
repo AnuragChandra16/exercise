@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Exercise Evaluation</title>
-    <link rel="stylesheet" href="../static/css/main.css">
+    <!-- Updated CSS link with the correct path -->
+    <link rel="stylesheet" href="/static/css/main.css">
     <!-- MediaPipe dependencies -->
     <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js"></script>
@@ -35,12 +36,12 @@
             <div id="rep-counter">Reps: 0</div>
         </div>
     </div>
-
-    <!-- JavaScript files -->
-    <script src="{{ url_for('static', filename='js/mediapipe-handler.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/three-visualization.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/squat-evaluator.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/pushup-evaluator.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    
+    <!-- Updated JavaScript file links with correct paths -->
+    <script src="/static/js/mediapipe-handler.js"></script>
+    <script src="/static/js/squat-evaluator.js"></script>
+    <script src="/static/js/pushup-evaluator.js"></script>
+    <script src="/static/js/three-visualization.js"></script>
+    <script src="/static/js/main.js"></script>
 </body>
 </html>
